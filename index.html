@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAE School Admission Age Guide | Feb 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --notion-text: #37352F;
+            --notion-text-secondary: #787774;
+            --notion-bg: #FFFFFF;
+            --notion-bg-secondary: #F7F6F3;
+            --notion-border: #E3E2E0;
+            --notion-hover: rgba(0, 0, 0, 0.03);
+            --notion-blue: #2383E2;
+            --notion-blue-bg: #E9F2FC;
+            --notion-purple: #9065B0;
+            --notion-purple-bg: #F3EDFA;
+            --notion-orange: #D9730D;
+            --notion-orange-bg: #FBECDD;
+            --notion-red: #E03E3E;
+            --notion-red-bg: #FFE2DD;
+            --notion-green: #0F7B6C;
+            --notion-green-bg: #DDEDEA;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--notion-bg);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: var(--notion-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            margin-bottom: 32px;
+        }
+
+        .header h1 {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--notion-text);
+            margin-bottom: 8px;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: var(--notion-text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .update-banner {
+            background: var(--notion-blue-bg);
+            color: var(--notion-blue);
+            padding: 12px 16px;
+            border-radius: 3px;
+            font-weight: 500;
+            font-size: 14px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-top: 16px;
+            border: 1px solid var(--notion-blue);
+        }
+
+        .update-banner::before {
+            content: "ℹ️";
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .flow-container {
+            margin-bottom: 24px;
+        }
+
+        .start-node {
+            background: transparent;
+            border: 1px solid var(--notion-border);
+            padding: 24px;
+            border-radius: 3px;
+            margin-bottom: 32px;
+        }
+
+        .start-node h2 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: var(--notion-text);
+        }
+
+        .start-node p {
+            font-size: 18px;
+            color: var(--notion-text);
+            font-weight: 600;
+        }
+
+        .decision-box {
+            background: var(--notion-bg);
+            border: 1px solid var(--notion-border);
+            border-radius: 3px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .decision-box.highlight {
+            background: var(--notion-purple-bg);
+            border-color: var(--notion-purple);
+        }
+
+        .decision-label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--notion-text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .decision-question {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--notion-text);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .branch-container {
+            display: grid;
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .branch {
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .branch::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--notion-text-secondary);
+            font-size: 14px;
+        }
+
+        .branch-label {
+            font-weight: 600;
+            color: var(--notion-text);
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .branch-label.yes {
+            color: var(--notion-text);
+        }
+
+        .branch-label.yes::before {
+            content: "✓ ";
+            color: var(--notion-green);
+        }
+
+        .branch-label.no {
+            color: var(--notion-text);
+        }
+
+        .branch-label.no::before {
+            content: "✕ ";
+            color: var(--notion-text-secondary);
+        }
+
+        .outcome-box {
+            background: transparent;
+            border-radius: 3px;
+            padding: 16px;
+            border-left: 3px solid #ff3b3f;
+            margin: 12px 0;
+        }
+
+        .outcome-box.warning {
+            border-left-color: #ff3b3f;
+            background: transparent;
+        }
+
+        .outcome-box.critical {
+            border-left-color: #ff3b3f;
+            background: transparent;
+        }
+
+        .outcome-title {
+            font-weight: 600;
+            color: var(--notion-text);
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .outcome-description {
+            color: var(--notion-text);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .nested {
+            margin-left: 16px;
+            margin-top: 16px;
+            padding-left: 16px;
+            border-left: 2px solid var(--notion-border);
+        }
+
+        .legend {
+            background: var(--notion-bg-secondary);
+            border: 1px solid var(--notion-border);
+            border-radius: 3px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .legend h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--notion-text);
+            margin-bottom: 16px;
+        }
+
+        .legend-grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--notion-text);
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            flex-shrink: 0;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .footnote {
+            background: var(--notion-bg-secondary);
+            border: 1px solid var(--notion-border);
+            border-radius: 3px;
+            padding: 16px;
+            margin-top: 24px;
+            font-size: 13px;
+            color: var(--notion-text-secondary);
+            line-height: 1.6;
+        }
+
+        .footnote strong {
+            color: var(--notion-text);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+
+        .tag.british {
+            background: var(--notion-purple-bg);
+            color: var(--notion-purple);
+        }
+
+        .tag.all {
+            background: var(--notion-bg-secondary);
+            color: var(--notion-text-secondary);
+        }
+
+        .connector {
+            text-align: center;
+            padding: 12px;
+            color: var(--notion-text-secondary);
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .connector::before {
+            content: "↓";
+            display: block;
+            font-size: 20px;
+            color: var(--notion-text-secondary);
+            margin-bottom: 4px;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 20px 12px;
+            }
+
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .decision-question {
+                font-size: 15px;
+            }
+
+            .legend, .flow-container, .decision-box {
+                padding: 16px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .flow-container > * {
+            animation: fadeIn 0.4s ease-out forwards;
+            opacity: 0;
+        }
+
+        .flow-container > *:nth-child(1) { animation-delay: 0.05s; }
+        .flow-container > *:nth-child(2) { animation-delay: 0.1s; }
+        .flow-container > *:nth-child(3) { animation-delay: 0.15s; }
+        .flow-container > *:nth-child(4) { animation-delay: 0.2s; }
+        .flow-container > *:nth-child(5) { animation-delay: 0.25s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="subtitle">MOE guidelines: how parents and schools are interpreting</div>
+            <h1>School admission age guide</h1>
+        </div>
+
+        <div class="flow-container">
+            <div class="start-node">
+                <h2>START HERE</h2>
+                <p>Is your child currently enrolled in any school / nursery / early childhood centre in 2025/2026?</p>
+            </div>
+
+            <div class="branch-container">
+                <div class="branch">
+                    <div class="branch-label yes">YES</div>
+                    <div class="outcome-box">
+                        <div class="outcome-title">Old Cut-Off Applies Indefinitely</div>
+                        <div class="outcome-description">
+                            <strong>Examples:</strong>
+                            <ul style="margin-top: 8px; padding-left: 20px;">
+                                <li>Sept-Dec 2022 → FS1/Pre-KG in 2026/2027</li>
+                                <li>Sept-Dec 2023 → FS1/Pre-KG in 2027/2028</li>
+                            </ul>
+                            <div style="margin-top: 12px; padding: 12px; background: #E8F4F8; border-radius: 8px; font-size: 14px;">
+                                <strong>Protected:</strong> Children already in nursery/school continue with August 31 cut-off
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="branch">
+                    <div class="branch-label no">NO</div>
+                    <div class="decision-box">
+                        <div class="decision-label">Step 2</div>
+                        <div class="decision-question">Is your child going to enrol in British curriculum?</div>
+
+                        <div class="branch-container">
+                            <div class="branch">
+                                <div class="branch-label yes">YES — British Curriculum</div>
+                                <span class="tag british">Special Flexibility</span>
+                                
+                                <div class="decision-box highlight">
+                                    <div class="decision-label">Step 3A</div>
+                                    <div class="decision-question">Is child born between Sept 1 - Dec 1, 2022?</div>
+                                    
+                                    <div class="branch-container">
+                                        <div class="branch">
+                                            <div class="branch-label yes">YES</div>
+                                            <div class="outcome-box warning">
+                                                <div class="outcome-title">⚠️ 2026/2027 Only: Assessment Available</div>
+                                                <div class="outcome-description">
+                                                    Schools and parents can assess readiness for FS2.<br>
+                                                    <strong>If ready:</strong> FS2<br>
+                                                    <strong>If not ready:</strong> FS1<br>
+                                                    <em style="display: block; margin-top: 8px; font-size: 13px;">Academic progression follows from placement</em>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="nested">
+                                    <div class="decision-box highlight">
+                                        <div class="decision-label">Step 3B</div>
+                                        <div class="decision-question">Is child born between Sept 1 - Dec 1, 2023?</div>
+                                        
+                                        <div class="branch-container">
+                                            <div class="branch">
+                                                <div class="branch-label yes">YES</div>
+                                                <div class="outcome-box warning">
+                                                    <div class="outcome-title">⚠️ Assessment Available for FS1</div>
+                                                    <div class="outcome-description">
+                                                        Schools assess readiness in consultation with parents.<br>
+                                                        <strong>If ready:</strong> FS1 this year<br>
+                                                        <strong>If not ready:</strong> FS1 next year
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="nested">
+                                        <div class="decision-box highlight">
+                                            <div class="decision-label">Step 3C</div>
+                                            <div class="decision-question">Is child born between Sept 1 - Dec 1, 2024 (or 2025, 2026...)?</div>
+                                            
+                                            <div class="branch-container">
+                                                <div class="branch">
+                                                    <div class="branch-label yes">YES</div>
+                                                    <div class="outcome-box warning">
+                                                        <div class="outcome-title">⚠️ Annual Assessment Policy</div>
+                                                        <div class="outcome-description">
+                                                            If turning 3 between Sept-Dec of school year:<br>
+                                                            Schools assess readiness in consultation with parents.<br>
+                                                            <strong>If ready:</strong> FS1 that year<br>
+                                                            <strong>If not ready:</strong> FS1 following year<br>
+                                                            <em style="display: block; margin-top: 8px; font-size: 13px;">Applies annually from 2026/2027 onwards</em>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="branch">
+                                <div class="branch-label no">NO — Other Curriculum</div>
+                                <span class="tag all">American, IB, Indian, etc.</span>
+                                
+                                <div class="outcome-box critical">
+                                    <div class="outcome-title">New Cut-Off Applies</div>
+                                    <div class="outcome-description">
+                                        December 31 cut-off (child must turn 3 before Jan 1)
+                                        <div style="margin-top: 12px;">
+                                            <strong>Examples:</strong>
+                                            <ul style="margin-top: 8px; padding-left: 20px;">
+                                                <li>Sept-Dec 2022 → FS2/KG1</li>
+                                                <li>Sept-Dec 2023 → FS1/Pre-KG</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
